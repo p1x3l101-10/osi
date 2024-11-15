@@ -13,6 +13,7 @@ CONF=(
 # Kill the system
 # No more package management or anything of the like
 pacman --noconfirm -Rcns --force pacman systemd-sysvcompat mkinitcpio
+rm -f /init
 
 for file in "${CONF[@]}"; do
     rm -rvf "/etc/${file:?}"

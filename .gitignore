@@ -9,3 +9,4 @@
 /mkosi.rootpw
 /mkosi.passphrase
 /.mkosi-private
+#/mkosi.machine-id

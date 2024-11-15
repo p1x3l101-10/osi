@@ -1,6 +1,18 @@
 #!/usr/bin/env bash
 
-CONF=()
+CONF=(
+    'makepkg.conf.d'
+    'pacman.d'
+    'arch-release'
+    'fstab'
+    'locale.gen'
+    'makepkg.conf'
+    'pacman.conf'
+)
+
+# Kill the system
+# No more package management or anything of the like
+pacman --noconfirm -Rcns --force pacman systemd-sysvcompat mkinitcpio
 
 for file in "${CONF[@]}"; do
     rm -rvf "/etc/${file:?}"

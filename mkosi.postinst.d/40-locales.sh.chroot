@@ -2,7 +2,7 @@
 
 try_locales=(
     'en_us.UTF-8'
-    'ja_JP.UTF-8'
+    #'ja_JP.UTF-8'
 )
 file="/etc/locale.gen"
 for locale in "${try_locales[@]}"; do

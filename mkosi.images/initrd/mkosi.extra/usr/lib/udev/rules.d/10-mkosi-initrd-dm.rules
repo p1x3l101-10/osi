@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: GPL-2.0-only
+# Copied from https://github.com/dracutdevs/dracut/blob/059/modules.d/90dm/11-dm.rules
+# Copied again from https://github.com/systemd/mkosi/blob/158c2d1fd221e7dd689ea14a1b32617b22764b43/mkosi/resources/mkosi-initrd/mkosi.extra/usr/lib/udev/rules.d/10-mkosi-initrd-dm.rules
+
+SUBSYSTEM!="block", GOTO="dm_end"
+KERNEL!="dm-[0-9]*", GOTO="dm_end"
+ACTION!="add|change", GOTO="dm_end"
+OPTIONS+="db_persist"
+LABEL="dm_end"

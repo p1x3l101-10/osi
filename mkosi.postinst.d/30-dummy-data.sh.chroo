@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+PFX="/var/lib/root/etc"
+CONF=(
+    'vconsole.conf'
+    'hostname'
+    'machine-info'
+    'locale.conf'
+    'localtime'
+)
+
+mkdir -p $PFX
+
+for file in "${CONF[@]}" ;do
+    if [[ ! -e /etc/$file ]]; then
+        touch /etc/$file
+    fi
+    mv -v /etc/$file ${PFX}/$file
+    ln -sv ${PFX}/$file /etc/$file
+done

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+CONF=()
+
+for file in "${CONF[@]}"; do
+    rm -rvf "/etc/${file:?}"
+done

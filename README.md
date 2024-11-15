@@ -1,6 +1,6 @@
 You need to run these commands before running `mkosi`:
 ```bash
-mkosi genkeys
+mkosi genkey
 systemd-id128 new > mkosi.machine-id
 ```
 

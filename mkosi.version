@@ -1,3 +1,1 @@
-#!/bin/sh
-# git describe
-date '+%Y-%m-%d'
+v0.0.1

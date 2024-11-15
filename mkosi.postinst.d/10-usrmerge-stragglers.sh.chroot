@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+mv -v /opt /usr/opt
+ln -sv usr/opt /opt

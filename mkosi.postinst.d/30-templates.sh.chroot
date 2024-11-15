@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+mkdir -pv /usr/share/factory
+mv -v /var/lib /usr/share/factory/lib

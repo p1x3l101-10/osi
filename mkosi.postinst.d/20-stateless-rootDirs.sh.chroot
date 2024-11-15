@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+rm -rfv /home /usr/local /root
+ln -sfv /var/lib/root/home /home
+ln -sfv /var/lib/root/usrlocal /usr/local
+ln -sfv /var/lib/root/roothome /root

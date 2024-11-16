@@ -12,9 +12,14 @@ CONF=(
 
 # Kill the system
 # No more package management or anything of the like
-pacman --noconfirm -Rcns --force pacman systemd-sysvcompat mkinitcpio
-rm -f /init
+case $DISTRO in
+    'arch')
+        pacman --noconfirm -Rcns --force pacman systemd-sysvcompat mkinitcpio
+        rm -f /init
+        ;;
+esac
 
+# Try to remove the files, no garuntee that they exist tho
 for file in "${CONF[@]}"; do
     rm -rvf "/etc/${file:?}"
 done
